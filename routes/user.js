@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// HTTP PUT 요청
+// 사용자 수정
 router.put('/:id', async (req, res) => {
   try {
     const user = await User.findByPk(req.params.id);
@@ -37,7 +37,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// HTTP DELETE 요청
+// 사용자 삭제
 router.delete('/:id', async (req, res) => {
   try {
     const user = await User.findByPk(req.params.id);
